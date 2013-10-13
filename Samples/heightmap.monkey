@@ -29,7 +29,7 @@ Class HeightMap Extends Sample
     	' Ground
     	Local ground:= Mesh.CreateGroundFromHeightMap("ground", "data/heightMap.png", 100, 100, 100, 0, 10, Scene, False)
    	 	Local groundMaterial:= NStandardMaterial("ground", Scene)
-    	groundMaterial.diffuseTexture = NTexture("data/ground.jpg", Scene)
+    	groundMaterial.diffuseTexture = NTexture("data/Ground.jpg", Scene)
     	groundMaterial.diffuseTexture.uScale = 6
     	groundMaterial.diffuseTexture.vScale = 6
     	groundMaterial.specularColor = NColor3(0, 0, 0)

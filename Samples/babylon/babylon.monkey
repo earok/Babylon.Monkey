@@ -114,7 +114,7 @@ Class BabylonGame Extends App
 		
 		'Update the Canvas size
 		If AutoResize And (Canvas2D.width <> Width or Canvas2D.height <> Height)
-			DebugStop
+			
 			Width = Canvas2D.width
 			Height = Canvas2D.height
 			Canvas3D.width = Width
@@ -203,7 +203,7 @@ Class BabylonImporter
 	Private
 	Method _loadedMesh(name:string, newMeshes:Mesh[] = New Mesh[0], particleSystems:ParticleSystem[] = New ParticleSystem[0], skeletons:Skeleton[] = New Skeleton[0])
 		If (name = "") Return
-		DebugStop
+		
 		Local data:= New LoadedMeshData
 		data.Meshes = newMeshes
 		data.ParticleSystems = particleSystems

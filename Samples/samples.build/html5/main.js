@@ -1775,7 +1775,6 @@ c_BabylonGame.prototype.p_OnRender=function(){
 		return 0;
 	}
 	if(this.m_AutoResize && ((this.m_Canvas2D.width)!=this.m_Width || (this.m_Canvas2D.height)!=this.m_Height)){
-		debugStop();
 		this.m_Width=(this.m_Canvas2D.width);
 		this.m_Height=(this.m_Canvas2D.height);
 		this.m_Canvas3D.width=((this.m_Width)|0);
@@ -1994,7 +1993,6 @@ c_BabylonImporter.prototype.p__loadedMesh=function(t_name,t_newMeshes,t_particle
 	if(t_name==""){
 		return 0;
 	}
-	debugStop();
 	var t_data=c_LoadedMeshData.m_new.call(new c_LoadedMeshData);
 	t_data.m_Meshes=t_newMeshes;
 	t_data.m_ParticleSystems=t_particleSystems;
@@ -2406,7 +2404,7 @@ c_Bumpmap.prototype.p_Create=function(){
 	var t_light=new BABYLON.PointLight("Omni",new BABYLON.Vector3(20.0,100.0,2.0),this.m_Scene);
 	this.m_sphere=BABYLON.Mesh.CreateSphere("Sphere",16,3.0,this.m_Scene);
 	var t_material=new BABYLON.StandardMaterial("kosh",this.m_Scene);
-	t_material.bumpTexture=new BABYLON.Texture("Data/normalMap.jpg",this.m_Scene,false,false);
+	t_material.bumpTexture=new BABYLON.Texture("data/normalMap.jpg",this.m_Scene,false,false);
 	t_material.diffuseColor=new BABYLON.Color3(1.0,0.0,0.0);
 	this.m_sphere.material=(t_material);
 	t_camera.setPosition(new BABYLON.Vector3(-5.0,5.0,0.0));
@@ -2595,7 +2593,7 @@ c_HeightMap.prototype.p_Create=function(){
 	t_skybox.material=(t_skyboxMaterial);
 	var t_ground=BABYLON.Mesh.CreateGroundFromHeightMap("ground","data/heightMap.png",100.0,100.0,100,0.0,10.0,this.m_Scene,false);
 	var t_groundMaterial=new BABYLON.StandardMaterial("ground",this.m_Scene);
-	t_groundMaterial.diffuseTexture=new BABYLON.Texture("data/ground.jpg",this.m_Scene,false,false);
+	t_groundMaterial.diffuseTexture=new BABYLON.Texture("data/Ground.jpg",this.m_Scene,false,false);
 	t_groundMaterial.diffuseTexture.uScale=6.0;
 	t_groundMaterial.diffuseTexture.vScale=6.0;
 	t_groundMaterial.specularColor=new BABYLON.Color3(0.0,0.0,0.0);
@@ -2714,7 +2712,7 @@ c_MultiMat.prototype.p_Create=function(){
 	var t_light=new BABYLON.PointLight("Omni",new BABYLON.Vector3(20.0,100.0,2.0),this.m_Scene);
 	var t_material0=new BABYLON.StandardMaterial("mat0",this.m_Scene);
 	t_material0.diffuseColor=new BABYLON.Color3(1.0,0.0,0.0);
-	t_material0.bumpTexture=new BABYLON.Texture("Data/normalMap.jpg",this.m_Scene,false,false);
+	t_material0.bumpTexture=new BABYLON.Texture("data/normalMap.jpg",this.m_Scene,false,false);
 	var t_material1=new BABYLON.StandardMaterial("mat1",this.m_Scene);
 	t_material1.diffuseColor=new BABYLON.Color3(0.0,0.0,1.0);
 	var t_material2=new BABYLON.StandardMaterial("mat2",this.m_Scene);
@@ -2805,7 +2803,7 @@ c_Shadows.prototype.p_Create=function(){
 	t_skybox.material=(t_skyboxMaterial);
 	var t_ground=BABYLON.Mesh.CreateGround("ground",1000.0,1000.0,1,this.m_Scene,false);
 	var t_groundMaterial=new BABYLON.StandardMaterial("ground",this.m_Scene);
-	t_groundMaterial.diffuseTexture=new BABYLON.Texture("data/assets/grass.jpg",this.m_Scene,false,false);
+	t_groundMaterial.diffuseTexture=new BABYLON.Texture("data/Assets/grass.jpg",this.m_Scene,false,false);
 	t_groundMaterial.diffuseTexture.uScale=60.0;
 	t_groundMaterial.diffuseTexture.vScale=60.0;
 	t_groundMaterial.diffuseColor=new BABYLON.Color3(0.0,0.0,0.0);
@@ -2950,9 +2948,9 @@ c_Test.prototype.p_Create=function(){
 		t_sprite.playAnimation(0,9,true,100.0);
 		t_sprite.color=new BABYLON.Color4(1.0,0.0,0.0,1.0);
 	}
-	this.m_background0=new BABYLON.Layer("back0","Data/Assets/Layer0_0.png",this.m_Scene);
-	var t_background1=new BABYLON.Layer("back1","Data/Assets/Layer1_0.png",this.m_Scene);
-	var t_foreground=new BABYLON.Layer("back0","Data/Assets/Layer2_0.png",this.m_Scene,true,new BABYLON.Color4(1.0,0.0,0.0,1.0));
+	this.m_background0=new BABYLON.Layer("back0","data/Assets/Layer0_0.png",this.m_Scene);
+	var t_background1=new BABYLON.Layer("back1","data/Assets/Layer1_0.png",this.m_Scene);
+	var t_foreground=new BABYLON.Layer("back0","data/Assets/Layer2_0.png",this.m_Scene,true,new BABYLON.Color4(1.0,0.0,0.0,1.0));
 	this.m_spaceDek=this.m_Importer.m_Meshes.p_Get("Vaisseau").m_Meshes[0];
 	for(var t_index2=0;t_index2<=this.m_Importer.m_Meshes.p_Get("Vaisseau").m_Meshes.length-1;t_index2=t_index2+1){
 		object_downcast((object_downcast((t_mirror.material),BABYLON.StandardMaterial).reflectionTexture),BABYLON.MirrorTexture).renderList.push(this.m_Importer.m_Meshes.p_Get("Vaisseau").m_Meshes[t_index2]);

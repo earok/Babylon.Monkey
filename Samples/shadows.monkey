@@ -36,7 +36,7 @@ Class Shadows Extends Sample
     ' Ground
     Local ground:= Mesh.CreateGround("ground", 1000, 1000, 1, Scene, False)
     Local groundMaterial:= NStandardMaterial("ground", Scene)
-    groundMaterial.diffuseTexture = NTexture("data/assets/grass.jpg", Scene)
+    groundMaterial.diffuseTexture = NTexture("data/Assets/grass.jpg", Scene)
     groundMaterial.diffuseTexture.uScale = 60
     groundMaterial.diffuseTexture.vScale = 60
     groundMaterial.diffuseColor = NColor3(0, 0, 0)

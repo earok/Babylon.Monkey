@@ -15,7 +15,7 @@ Class MultiMat Extends Sample
 
     	Local material0:= NStandardMaterial("mat0", Scene)
     	material0.diffuseColor = NColor3(1, 0, 0)
-    	material0.bumpTexture = NTexture("Data/normalMap.jpg", Scene)
+    	material0.bumpTexture = NTexture("data/normalMap.jpg", Scene)
     
     	Local material1:= NStandardMaterial("mat1", Scene)
     	material1.diffuseColor = NColor3(0, 0, 1)

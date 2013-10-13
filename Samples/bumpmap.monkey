@@ -16,7 +16,7 @@ Class Bumpmap Extends Sample
 	    Local material:= NStandardMaterial("kosh", Scene)
 		
 		'Todo - move texture loading into impoter
-	    material.bumpTexture = NTexture("Data/normalMap.jpg", Scene)
+	    material.bumpTexture = NTexture("data/normalMap.jpg", Scene)
 	    material.diffuseColor = NColor3(1, 0, 0)
     
 	    sphere.material = material

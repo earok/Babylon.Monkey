@@ -121,9 +121,9 @@ Class Test Extends Sample
 	
 
     ' Backgrounds
-   	 background0 = NLayer("back0", "Data/Assets/Layer0_0.png", Scene)
-    Local background1:= NLayer("back1", "Data/Assets/Layer1_0.png", Scene)
-    Local foreground:= NLayer("back0", "Data/Assets/Layer2_0.png", Scene, True, NColor4(1, 0, 0, 1))
+   	 background0 = NLayer("back0", "data/Assets/Layer0_0.png", Scene)
+    Local background1:= NLayer("back1", "data/Assets/Layer1_0.png", Scene)
+    Local foreground:= NLayer("back0", "data/Assets/Layer2_0.png", Scene, True, NColor4(1, 0, 0, 1))
 
 
 	
