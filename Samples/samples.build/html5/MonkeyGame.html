@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style type="text/css">
+body{
+	height: 100%;
+	overflow: hidden; /* keeps scrollbar off IE */
+	font-family: arial,sans-serif;
+	font-size: 13px;
+	color: #000;
+	background-color: #fff;
+	padding:0px;
+	margin:0px;
+}
+canvas{
+	position:absolute;
+}
+canvas:focus{
+	outline:none;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="GameCanvas3D" width=800 height=600></canvas>
+<canvas id="GameCanvas" onclick="this.focus();" oncontextmenu="return false;" width=800 height=600 tabindex=1></canvas><br>
+
+<textarea id="GameConsole" style="width:640px;height:240px;border:0;padding:0;margin:0" readonly></textarea><br>
+
+<script language="javascript" src="main.js">Javascript not supported!</script>
+
+</body>
+</html>
