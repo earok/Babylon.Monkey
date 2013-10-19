@@ -3,18 +3,71 @@ Import "hand.minified-1.1.1.js"
 Import "babylon_monkey.js"
 Import mojo
 
-Import babylonanimations
-Import babylonbones
-Import babyloncamera
-Import babylonengine
-Import babylonlayer
-Import babylonlights
-Import babylonmaterials
-Import babylonmesh
-Import babylonparticles
-Import babylonscene
-Import babylonsprites
-Import babylontools
+Import engine
+Import scene
+
+Import Animations.animatable
+Import Animations.animation
+
+Import Bones.bone
+Import Bones.skeleton
+
+Import Cameras.arcRotateCamera
+Import Cameras.camera
+Import Cameras.deviceOrientationCamera
+Import Cameras.freeCamera
+Import Cameras.touchCamera
+
+Import Collisions.collider
+Import Collisions.collisionPlane
+
+Import Culling.boundingBox
+Import Culling.boundingInfo
+Import Culling.boundingSphere
+
+Import Culling.Octrees.octree
+Import Culling.Octrees.octreeBlock
+
+Import Layer.layer
+
+Import Lights.directionalLight
+Import Lights.hemisphericLight
+Import Lights.light
+Import Lights.pointLight
+Import Lights.spotLight
+
+Import Lights.Shadows.shadowGenerator
+
+Import Materials.effect
+Import Materials.material
+Import Materials.multiMaterial
+Import Materials.standardMaterial
+
+Import Materials.Textures.baseTexture
+Import Materials.Textures.cubeTexture
+Import Materials.Textures.dynamicTexture
+Import Materials.Textures.mirrorTexture
+Import Materials.Textures.renderTargetTexture
+Import Materials.Textures.texture
+Import Materials.Textures.videoTexture
+
+Import Mesh.mesh
+Import Mesh.subMesh
+Import Mesh.vertexBuffer
+
+Import Particles.particle
+Import Particles.particleSystem
+
+Import PostProcess.postProcess
+Import PostProcess.postProcessManager
+
+Import Sprites.sprite
+Import Sprites.spriteManager
+
+Import Tools.database
+Import Tools.math
+Import Tools.sceneLoader
+Import Tools.tools
 
 Class BabylonGame Extends App
 	
@@ -114,7 +167,7 @@ Class BabylonGame Extends App
 		
 		'Update the Canvas size
 		If AutoResize And (Canvas2D.width <> Width or Canvas2D.height <> Height)
-			DebugStop
+			
 			Width = Canvas2D.width
 			Height = Canvas2D.height
 			Canvas3D.width = Width
@@ -203,7 +256,7 @@ Class BabylonImporter
 	Private
 	Method _loadedMesh(name:string, newMeshes:Mesh[] = New Mesh[0], particleSystems:ParticleSystem[] = New ParticleSystem[0], skeletons:Skeleton[] = New Skeleton[0])
 		If (name = "") Return
-		DebugStop
+		
 		Local data:= New LoadedMeshData
 		data.Meshes = newMeshes
 		data.ParticleSystems = particleSystems

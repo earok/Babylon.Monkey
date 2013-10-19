@@ -2732,19 +2732,19 @@ c_MultiMat.prototype.p_Create=function(){
 	this.m_Scene.activeCamera.attachControl(this.m_Game.m_Canvas2D);
 	return 0;
 }
-function c_Octree(){
+function c_OctreeTest(){
 	c_Sample.call(this);
 }
-c_Octree.prototype=extend_class(c_Sample);
-c_Octree.m_new=function(){
+c_OctreeTest.prototype=extend_class(c_Sample);
+c_OctreeTest.m_new=function(){
 	c_Sample.m_new.call(this);
 	return this;
 }
-c_Octree.prototype.p_Preload=function(){
+c_OctreeTest.prototype.p_Preload=function(){
 	this.m_Name="Octree";
 	return 0;
 }
-c_Octree.prototype.p_Create=function(){
+c_OctreeTest.prototype.p_Create=function(){
 	var t_camera=new BABYLON.ArcRotateCamera("Camera",0.0,0.0,10.0,BABYLON.Vector3.Zero(),this.m_Scene);
 	var t_light0=new BABYLON.PointLight("Omni0",new BABYLON.Vector3(0.0,10.0,0.0),this.m_Scene);
 	var t_material=new BABYLON.StandardMaterial("kosh",this.m_Scene);
@@ -3045,7 +3045,7 @@ function bbMain(){
 	bb_samples_BGame.p_AddState("4",(c_HeightMap.m_new.call(new c_HeightMap)));
 	bb_samples_BGame.p_AddState("5",(c_Lights.m_new.call(new c_Lights)));
 	bb_samples_BGame.p_AddState("6",(c_MultiMat.m_new.call(new c_MultiMat)));
-	bb_samples_BGame.p_AddState("7",(c_Octree.m_new.call(new c_Octree)));
+	bb_samples_BGame.p_AddState("7",(c_OctreeTest.m_new.call(new c_OctreeTest)));
 	bb_samples_BGame.p_AddState("8",(c_Shadows.m_new.call(new c_Shadows)));
 	bb_samples_BGame.p_AddState("9",(c_Test.m_new.call(new c_Test)));
 	bb_samples_CurrentState=bb_samples_BGame.p_StateCount()-2;

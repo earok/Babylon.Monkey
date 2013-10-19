@@ -1,6 +1,6 @@
 Import samples
 
-Class Octree Extends Sample
+Class OctreeTest Extends Sample
 	
 	Method Preload()
 		Name = "Octree"

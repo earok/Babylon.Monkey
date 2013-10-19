@@ -23,7 +23,7 @@ Function Main()
 	BGame.AddState("4", New HeightMap())
 	BGame.AddState("5", New Lights())
 	BGame.AddState("6", New MultiMat())
-	BGame.AddState("7", New Octree())
+	BGame.AddState("7", New OctreeTest())
 	BGame.AddState("8", New Shadows())
 	BGame.AddState("9", New Test())
 	CurrentState = BGame.StateCount - 2
